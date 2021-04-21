@@ -1,0 +1,11 @@
+click
+Flask
+itsdangerous
+Jinja2
+MarkupSafe
+Werkzeug
+imagezmq
+imutils
+numpy
+opencv-contrib-python
+pyzmq

@@ -1,0 +1,29 @@
+
+{% extends "base.html" %}
+{% block body %}
+<h1>Welcome</h1>
+<div class="container col-12 col-lg-6">
+	<img src="{{ url_for('videoFeed') }}" alt="video source not found" style="width: 100%; height: 100%;">
+</div>
+
+<br>
+<div class="col-7">
+	{% include "writerModal.html" %}
+</div>
+<div class="col-7">
+	<a href="/show">
+		<div class="btn btn-success">Show recordings</div>
+	</a>
+</div>
+<div class="col-7">
+	<div id="showWriters" class="btn btn-success">show writers</div>
+</div>
+<div class="container" id="writers"></div>
+
+
+{% endblock %}
+
+{% block scripts%}
+<script src="{{url_for('static',filename='js/index.js')}}"></script>
+
+{% endblock%}

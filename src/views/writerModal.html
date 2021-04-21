@@ -1,0 +1,66 @@
+<!-- Button trigger modal -->
+
+<style type="text/css">
+  label, input {
+    width : 100%;
+  }
+</style>
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal">
+  New TimeLapse
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalLabel">Create a new TimeLapse writer</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form id="writerForm"   method="get" action="/record">
+          <div class="row">
+            <div class="col-4">
+              <label for="recording_time">recording time</label>
+            </div>
+            <div class="col-5">
+              <input type="range" name="recording_time" min="10" max="60" value="10">
+            </div>
+            <div class="col-3">
+              <input type="number"  name="recording_time_value">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-4">
+              <label for="fps">frames per second</label>
+            </div>
+            <div class="col-5">
+              <input type="range" name="fps" min="10" max="60" value="10">
+            </div>
+            <div class="col-3">
+              <input type="number"  name="fps_value">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-4">
+              <label for="speed">speed</label>
+            </div>
+            <div class="col-5">
+              <input type="range" name="speed" min="10" max="100" value="10"> 
+            </div>
+            <div class="col-3">
+              <input type="number"  name="speed_value">
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="submit" class="btn btn-success">Start recording</button>
+          </div>
+          
+        </form>
+      </div>
+      
+    </div>
+  </div>
+</div>
