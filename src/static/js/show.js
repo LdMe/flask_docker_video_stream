@@ -4,9 +4,10 @@ $(function(){
 	let elementsQuantity =  $('.recorded-video').length
 	let showQuantity = 10
 	function showBySteps() {
+		console.log("showing")
 		let counter = 0
 		$(".recorded-video").each(() => {
-			if(counter <  showQuantity){
+			if(counter >=  showQuantity){
 				$(this).hide()
 			}
 			else {
@@ -17,6 +18,7 @@ $(function(){
 	}
 	$("#showMore").click(()=>{
 		showQuantity += 10
+		console.log(showQuantity)
 		showBySteps()
 	})
 	showBySteps()
