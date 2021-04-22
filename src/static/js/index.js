@@ -1,5 +1,6 @@
 $(function(){
 	$("#homeButton").addClass("btn-dark")
+	$("#recordedButton").removeClass("btn-dark")
 	$("input[type='range']").each( function(){
 		console.log("name")
 		let name = $(this).attr("name")
