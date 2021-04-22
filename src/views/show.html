@@ -6,7 +6,7 @@
 	{% for i in range(files|length) %}
 	<div class="col-sm-12 col-md-4 p-4 recorded-video-card">
 		<div class="card p-0 m-0">
-			<video class=" card-img-top" id="video{{i}}" controls style="width:100%;" preload="none"><source  src="http://stream.lafuentedanel.com/show/{{f}}" type="video/mp4" >
+			<video class=" card-img-top" id="video{{i}}" controls style="width:100%;" preload="none"><source  src="http://stream.lafuentedanel.com/show/{{files[i]}}" type="video/mp4" >
 			</video>
 			<div class="card-title">
 				{{files[i]}}
