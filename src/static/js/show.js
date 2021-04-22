@@ -6,16 +6,14 @@ $(function(){
 	function showBySteps() {
 		console.log("showing")
 		console.log(showQuantity)
-		let counter = 0
-		$(".recorded-video").each(() => {
-			if(counter >=  showQuantity){
-				console.log(counter)
+		$(".recorded-video").each(function(index) {
+			if(index >=  showQuantity){
+				console.log(index)
 				$(this).hide()
 			}
 			else {
 				$(this).show()
 			}
-			counter++
 		})
 	}
 	$("#showMore").click(()=>{
