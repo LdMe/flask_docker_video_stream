@@ -1,26 +1,27 @@
 
 {% extends "base.html" %}
 {% block body %}
-<h1>Welcome</h1>
-<div class="container col-12 col-md-6">
-	<img src="{{ url_for('videoFeed') }}" alt="video source not found" style="width: 100%; height: 100%;">
-</div>
-
-<br>
-<div class="row" style="width: 100%;">
-	
-	<div class="col-6" >
-		{% include "writerModal.html" %}
-	</div>
-	<div class="col-6" >
-		<div id="showWriters" style="width: 100%" class="btn btn-success">show writers</div>
+<div class="container-fluid">
+	<h1>Welcome</h1>
+	<div class="container col-12 col-md-6">
+		<img src="{{ url_for('videoFeed') }}" alt="video source not found" style="width: 100%; height: 100%;">
 	</div>
 
+	<br>
+	<div class="row" style="width: 100%;">
+		
+		<div class="col-6" >
+			{% include "writerModal.html" %}
+		</div>
+		<div class="col-6" >
+			<div id="showWriters" style="width: 100%" class="btn btn-success">show writers</div>
+		</div>
+
+	</div>
+
+	<div class="container" id="writers"></div>
+
 </div>
-
-<div class="container" id="writers"></div>
-
-
 {% endblock %}
 
 {% block scripts%}
