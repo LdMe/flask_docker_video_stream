@@ -2,7 +2,7 @@
 {% block body %}
 
 <h1>Recorded videos</h1>
-<div class="row">
+<div class="row" style="width: 100%">
 	{% for f in files %}
 	<div class="card col-sm-12 col-md-4 ">
 		<video class="card-img-top" controls style="width:100%;"><source  src="http://stream.lafuentedanel.com/show/{{f}}" type="video/mp4" >
