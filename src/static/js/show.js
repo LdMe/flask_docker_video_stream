@@ -13,6 +13,7 @@ $(function(){
 			}
 			else {
 				$(this).show()
+				$(this).attr("preload","auto");
 			}
 		})
 	}
