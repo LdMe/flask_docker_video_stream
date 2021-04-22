@@ -2,6 +2,7 @@
 from datetime import datetime
 import cv2
 import os
+import json
 
 class TimeLapseWriter:
 	paused = True
@@ -16,7 +17,7 @@ class TimeLapseWriter:
 		self.timeLapseTimer = TimeLapseTimer(self.specs)
 		if not os.path.exists('static/media/'):
 			os.makedirs('static/media/')
-		specs = str(self.specs)
+		specs = json.dumps(self.specs)
 		self.filename = "static/media/"+self.timeLapseTimer.getFormattedStartTime()+"-"+specs+'fps.webm'
 		self.videoWriter = cv2.VideoWriter(self.filename,self.fourcc, self.specs.fps, self.frameSize)
 
