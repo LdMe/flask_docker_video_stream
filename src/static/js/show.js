@@ -1,11 +1,11 @@
 $(function(){
 	$("#recordedButton").addClass("btn-dark")
 	$("#homeButton").removeClass("btn-dark")
-	let elementsQuantity =  $('.recordedVideo').length
+	let elementsQuantity =  $('.recorded-video').length
 	let showQuantity = 10
 	function showBySteps() {
 		let counter = 0
-		$(".recordedVideo").each(() => {
+		$(".recorded-video").each(() => {
 			if(counter <  showQuantity){
 				$(this).hide()
 			}
