@@ -6,17 +6,19 @@
 </head>
 <body>
 	<h1>Recorded videos</h1>
-	{% for f in files %}
-	<div class="card">
-		<div class="card-title">
-			{{f}}
-		</div>
+	<div class="row">
+		{% for f in files %}
+		<div class="card col-sm-12 col-lg-4">
+			<div class="card-title">
+				{{f}}
+			</div>
 
-		<video class="card-img-top" controls style="width:400px;height:360px"><source  src="http://stream.lafuentedanel.com/show/{{f}}" type="video/mp4" ></video>
-			
+			<video class="card-img-top" controls style="width:400px;height:360px"><source  src="http://stream.lafuentedanel.com/show/{{f}}" type="video/mp4" ></video>
+
+			</div>
+			<br>
+			{% endfor %}
 		</div>
-		<br>
-		{% endfor %}
 		<a href="/">
 			<button>back to index</button>
 		</a>
