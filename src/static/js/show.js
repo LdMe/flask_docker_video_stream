@@ -2,7 +2,8 @@ $(function(){
 	$("#recordedButton").addClass("btn-dark")
 	$("#homeButton").removeClass("btn-dark")
 	let elementsQuantity =  $('.recorded-video-card').length
-	let showQuantity = 6
+	let step = 6;
+	let showQuantity = step
 	function showBySteps() {
 		console.log("showing")
 		console.log(showQuantity)
@@ -18,7 +19,7 @@ $(function(){
 		})
 	}
 	$("#showMore").click(()=>{
-		showQuantity += 10
+		showQuantity += step
 		console.log(showQuantity)
 		showBySteps()
 		if(showQuantity >= elementsQuantity) {
