@@ -1,6 +1,7 @@
 
 from datetime import datetime
 import cv2
+import os
 
 class TimeLapseWriter:
 	paused = True
@@ -13,6 +14,8 @@ class TimeLapseWriter:
 		#self.fourcc = cv2.VideoWriter_fourcc('F','M','P','4')# for .mp4
 		self.fourcc = cv2.VideoWriter_fourcc(*'VP80')# for .webm
 		self.timeLapseTimer = TimeLapseTimer(self.specs)
+		if not os.path.exists('static/media/'):
+			os.makedirs('static/media/')
 		self.filename = "static/media/"+self.timeLapseTimer.getFormattedStartTime()+'.webm'
 		self.videoWriter = cv2.VideoWriter(self.filename,self.fourcc, self.specs.fps, self.frameSize)
 
