@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% block body %}
 <h1>Recorded videos</h1>
-<div class="row overflow-auto">
+<div class="row">
 	{% for f in files %}
 	<div class="card col-sm-12 col-lg-4 ">
 		<video class="card-img-top" controls style="width:100%;"><source  src="http://stream.lafuentedanel.com/show/{{f}}" type="video/mp4" ></video>
@@ -12,8 +12,10 @@
 		<br>
 		{% endfor %}
 	</div>
-	<a href="/">
-		<button>back to index</button>
-	</a>
+	<div class="fixed-bottom">
+		<a href="/">
+			<button>back to index</button>
+		</a>
+	</div>
 
 {% endblock %}
