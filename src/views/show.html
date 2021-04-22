@@ -7,6 +7,7 @@
 	<h1>Recorded videos</h1>
 	{% for f in files %}
 	<video controls style="width:400px;height:360px"><source  src="http://stream.lafuentedanel.com/show/{{f}}" type="video/mp4" ></video>
+	<label > {{f}}</label>
 	<br>
 	{% endfor %}
 	<a href="/">
