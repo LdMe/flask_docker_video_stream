@@ -1,19 +1,19 @@
 $(function(){
 	$("#recordedButton").addClass("btn-dark")
 	$("#homeButton").removeClass("btn-dark")
-	let elementsQuantity =  $('.recorded-video').length
+	let elementsQuantity =  $('.recorded-video-card').length
 	let showQuantity = 6
 	function showBySteps() {
 		console.log("showing")
 		console.log(showQuantity)
-		$(".recorded-video").each(function(index) {
+		$(".recorded-video-card").each(function(index) {
 			if(index >=  showQuantity){
 				console.log(index)
 				$(this).hide()
 			}
 			else {
 				$(this).show()
-				$(this).attr("preload","auto");
+				$("#video"+index).attr("preload","auto");
 			}
 		})
 	}
