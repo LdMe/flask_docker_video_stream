@@ -88,7 +88,7 @@ class VideoServer:
 	def getEncodedFrame(self):
 		if(not hasattr(self,"frame")):
 			return None
-		frame = cv2.resize(self.frame,(int(self.frame_w*1), int(self.frame_h*1)))
+		frame = self.frame#cv2.resize(self.frame,(int(self.frame_w*1), int(self.frame_h*1)))
 		return cv2.imencode('.jpeg',frame)[1].tostring()
 	def record(self, outputSeconds = 10.0, fps = 10,timeBetweenFrames=1):
 		if(self.started):
