@@ -1,5 +1,5 @@
 $(function(){
-	console.log("hello world")
+	$("#homeButton").addClass("btn-dark")
 	$("input[type='range']").each( function(){
 		console.log("name")
 		let name = $(this).attr("name")
