@@ -13,7 +13,7 @@ $(function(){
 			}
 			else {
 				$(this).show()
-				$("#video"+index).attr("preload","auto");
+				$("#video"+index).removeAttr( "preload" )
 			}
 		})
 	}
