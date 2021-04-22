@@ -8,7 +8,6 @@ $(function(){
 		console.log(showQuantity)
 		$(".recorded-video-card").each(function(index) {
 			if(index >=  showQuantity){
-				console.log(index)
 				$(this).hide()
 			}
 			else {
