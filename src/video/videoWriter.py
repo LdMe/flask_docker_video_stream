@@ -17,7 +17,7 @@ class TimeLapseWriter:
 		if not os.path.exists('static/media/'):
 			os.makedirs('static/media/')
 		fps = self.getSpecs()["fps"]
-		self.speed = self.getSpecs()["speed"]
+		speed = self.getSpecs()["speed"]
 		self.filename = "static/media/"+self.timeLapseTimer.getFormattedStartTime()+"x"+speed+"-"+fps+'fps.webm'
 		self.videoWriter = cv2.VideoWriter(self.filename,self.fourcc, self.specs.fps, self.frameSize)
 
