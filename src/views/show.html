@@ -6,7 +6,7 @@
 	{% for f in files %}
 	<div class="col-sm-12 col-md-4 p-4 ">
 		<div class="card p-0 m-0">
-			<video class="card-img-top" controls style="width:100%;" preload="none"><source  src="http://stream.lafuentedanel.com/show/{{f}}" type="video/mp4" >
+			<video class=" recorded-video card-img-top" controls style="width:100%;" preload="none"><source  src="http://stream.lafuentedanel.com/show/{{f}}" type="video/mp4" >
 			</video>
 			<div class="card-title">
 				{{f}}
@@ -15,7 +15,7 @@
 	</div>
 	{% endfor %}
 </div>
-
+<div class="btn btn-secondary" id="showMore">Show More</div>
 {% endblock %}
 {% block scripts%}
 <script src="{{url_for('static',filename='js/show.js')}}"></script>
