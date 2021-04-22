@@ -13,7 +13,9 @@ class TimeLapseWriter:
 		#self.fourcc = cv2.VideoWriter_fourcc('F','M','P','4')# for .mp4
 		self.fourcc = cv2.VideoWriter_fourcc(*'VP80')# for .webm
 		self.timeLapseTimer = TimeLapseTimer(self.specs)
-		self.filename = "static/media/"+self.timeLapseTimer.getFormattedStartTime()+'.webm'
+		fps = self.getSpecs()["fps"]
+		speed = self.getSpecs()["speed"]
+		self.filename = "static/media/"+self.timeLapseTimer.getFormattedStartTime()+ "x"+speed+"-"+fps+'fps.webm'
 		self.videoWriter = cv2.VideoWriter(self.filename,self.fourcc, self.specs.fps, self.frameSize)
 
 	def record(self):
