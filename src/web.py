@@ -3,13 +3,15 @@ from flask import Flask, render_template, Response, redirect, send_from_director
 from video.videoServer import WebServer
 from threading import Thread
 import time
+from arduino.server import SocketServer
 
 app = Flask(__name__,template_folder="views",static_folder='static')
 webServer= WebServer()	
+arduinoSocket = SocketServer()
 
 @app.route("/")
 def index():
-	return render_template("index.html")
+	return render_template("index.html",temperature = arduinoSocket.temperature,humidity = arduinoSocket.humidity)
 
 @app.route('/video_feed')
 def videoFeed():
