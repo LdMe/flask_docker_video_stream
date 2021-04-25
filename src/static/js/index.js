@@ -47,6 +47,10 @@ $(function(){
 	$(".dropdown-item").on("click",function(event){
 
 	})
+	Datainterval =setInterval( 
+			function(){
+				getData();
+			},1000);
 	function showWriters(){
 		getWriters();
 		interval =setInterval( 
@@ -55,6 +59,14 @@ $(function(){
 				$("#writerTable td").on("hover")
 			},1000);
 
+	}
+	function getData(){
+		$.ajax({url: "/active", 
+			success: function(result){
+				$("#temperature").html("Temperature: "+ result.temperature)
+				$("#humidity").html("Humidity: "+ result.humidity)
+
+			}})
 	}
 	function getWriters(){
 		$.ajax({url: "/active", 
