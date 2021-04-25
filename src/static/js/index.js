@@ -61,7 +61,7 @@ $(function(){
 
 	}
 	function getData(){
-		$.ajax({url: "/active", 
+		$.ajax({url: "/data", 
 			success: function(result){
 				$("#temperature").html("Temperature: "+ result.temperature)
 				$("#humidity").html("Humidity: "+ result.humidity)
