@@ -13,6 +13,11 @@ arduinoSocket = SocketServer()
 def index():
 	return render_template("index.html",temperature = arduinoSocket.temperature,humidity = arduinoSocket.humidity)
 
+@app.route("/data")
+def sendData():
+	data={"temperature":arduinoSocket.temperature, "humidity":arduinoSocket.humidity}
+	return jsonify(data)
+
 @app.route('/video_feed')
 def videoFeed():
 	try:
