@@ -1,6 +1,6 @@
 click
 Flask
-itsdangerous
+#itsdangerous
 Jinja2
 MarkupSafe
 Werkzeug
@@ -9,3 +9,4 @@ imutils
 numpy
 opencv-contrib-python
 pyzmq
+flask-talisman
