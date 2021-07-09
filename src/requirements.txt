@@ -9,4 +9,3 @@ imutils
 numpy
 opencv-contrib-python
 pyzmq
-flask-talisman
