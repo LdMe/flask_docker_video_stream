@@ -64,5 +64,5 @@ def showWriters():
 if __name__ == '__main__':
 	
 	#Thread(target= get_frame, args=()).start()
-	Talisman(app)
-	#app.run(host="0.0.0.0",port="80" ,debug=False)
+	#Talisman(app)
+	app.run(host="0.0.0.0",port="443" ,debug=False)
