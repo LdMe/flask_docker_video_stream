@@ -4,6 +4,7 @@ from video.videoServer import WebServer
 from threading import Thread
 import time
 from arduino.server import SocketServer
+from flask_talisman import Talisman
 
 app = Flask(__name__,template_folder="views",static_folder='static')
 webServer= WebServer()	
@@ -64,4 +65,4 @@ if __name__ == '__main__':
 	
 	#Thread(target= get_frame, args=()).start()
 	#Talisman(app)
-	app.run(ssl_context='adhoc',debug=False)
+	app.run(host="0.0.0.0",debug=False)
